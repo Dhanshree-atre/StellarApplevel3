@@ -8,7 +8,7 @@ A live polling dApp built on the Stellar testnet. Connect your Freighter wallet,
 
 | Item | Link |
 |------|------|
-| **Live Demo** | https://stellarvote.vercel.app *(deploy to Vercel — see instructions below)* |
+| **Live Demo** | https://stellarvote1.netlify.app/ |
 | **Deployed Contract** | CA_REPLACE_WITH_YOUR_REAL_CONTRACT_ID|
 | **Stellar Expert** | https://stellar.expert/explorer/testnet/contract/CA_REPLACE_WITH_YOUR_REAL_CONTRACT_ID |
 
