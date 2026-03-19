@@ -16,11 +16,11 @@ A live polling dApp built on the Stellar testnet. Connect your Freighter wallet,
 
 ## 📸 Screenshots
 
-> **Wallet options available:**
+
 > <img width="1920" height="1200" alt="Screenshot 2026-03-04 195737" src="https://github.com/user-attachments/assets/3bf23470-ba41-4c78-8ec6-aeeb3168e7e8" />
 
 
-![Wallet Panel](screenshot.png)
+
 
 ---
 
