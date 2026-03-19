@@ -27,7 +27,6 @@ Level 3
 "C:\Users\ASUS\Videos\Captures\React App - Google Chrome 2026-03-19 19-45-26.mp4"
 
 
-
 ---
 
 ## ✅ Yellow Belt Requirements Checklist
