@@ -16,7 +16,13 @@ A live polling dApp built on the Stellar testnet. Connect your Freighter wallet,
 
 ## 📸 Screenshots
 
+Level 2 
+<img width="1909" height="1119" alt="Screenshot 2026-03-19 224239" src="https://github.com/user-attachments/assets/e46aff03-1234-4100-b063-4c7a6f2919b4" />
+<img width="1890" height="1086" alt="Screenshot 2026-03-19 224311" src="https://github.com/user-attachments/assets/ed925296-a157-4946-b608-076ecf0efb01" />
+<img width="1917" height="1087" alt="Screenshot 2026-03-19 224323" src="https://github.com/user-attachments/assets/49a9e408-c73b-4efa-b284-dd975fb8bd51" />
 
+
+Level 3
 > <img width="1920" height="1200" alt="Screenshot 2026-03-04 195737" src="https://github.com/user-attachments/assets/3bf23470-ba41-4c78-8ec6-aeeb3168e7e8" />
 
 
