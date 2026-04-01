@@ -9,33 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Get code
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      # 2. Setup Node.js
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    # FRONTEND (React)
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-      # 3. Install frontend dependencies
-      - name: Install dependencies
-        working-directory: frontend/stellar-poll-app
-        run: npm install
+    - name: Install dependencies
+      working-directory: frontend/stellar-poll-app
+      run: npm install
 
-      # 4. Build frontend
-      - name: Build React App
-        working-directory: frontend/stellar-poll-app
-        run: npm run build
+    - name: Build React App
+      working-directory: frontend/stellar-poll-app
+      run: npm run build
 
-      # 5. Setup Rust (for contract)
-      - name: Setup Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
+    # CONTRACT (Rust - Soroban)
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
 
-      # 6. Run contract tests
-      - name: Run Smart Contract Tests
-        working-directory: contract/poll-contract/contracts/hello-world
-        run: cargo test
+    - name: Run Contract Tests
+      working-directory: contract/poll-contract
+      run: cargo test
