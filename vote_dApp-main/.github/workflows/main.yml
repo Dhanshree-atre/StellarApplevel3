@@ -68,8 +68,10 @@ jobs:
       with:
         name: build-artifacts
         path: |
-          frontend/stellar-poll-app/dist
+          frontend/stellar-poll-app/build
+          vote_dApp-main/frontend/stellar-poll-app/build
           contract/poll-contract/target/wasm32-unknown-unknown/release
+          vote_dApp-main/contract/poll-contract/target/wasm32-unknown-unknown/release
 
   code-quality:
     name: Code Quality Checks
