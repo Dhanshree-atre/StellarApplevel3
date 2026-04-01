@@ -61,17 +61,16 @@ jobs:
       working-directory: contract/poll-contract
       run: cargo build --target wasm32-unknown-unknown --release
 
-    # ========== OPTIONAL: UPLOAD ARTIFACTS ==========
+    # ========== UPLOAD ARTIFACTS ==========
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       if: always()
       with:
         name: build-artifacts
+        retention-days: 30
         path: |
-          frontend/stellar-poll-app/build
-          vote_dApp-main/frontend/stellar-poll-app/build
-          contract/poll-contract/target/wasm32-unknown-unknown/release
-          vote_dApp-main/contract/poll-contract/target/wasm32-unknown-unknown/release
+          frontend/stellar-poll-app/build/
+          contract/poll-contract/target/wasm32-unknown-unknown/release/
 
   code-quality:
     name: Code Quality Checks
