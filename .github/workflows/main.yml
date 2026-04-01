@@ -28,20 +28,20 @@ jobs:
         cache: 'npm'
 
     - name: Install frontend dependencies
-      working-directory: frontend/stellar-poll-app
+      working-directory: vote_dApp-main/frontend/stellar-poll-app
       run: npm install
 
     - name: Lint frontend code
-      working-directory: frontend/stellar-poll-app
+      working-directory: vote_dApp-main/frontend/stellar-poll-app
       run: npm run lint || true
 
     - name: Build frontend
-      working-directory: frontend/stellar-poll-app
+      working-directory: vote_dApp-main/frontend/stellar-poll-app
       run: npm run build
 
     - name: Run frontend tests
-      working-directory: frontend/stellar-poll-app
-      run: npm test || true
+      working-directory: vote_dApp-main/frontend/stellar-poll-app
+      run: npm test -- --watchAll=false || true
 
     # ========== SMART CONTRACT TESTS ==========
     - name: Setup Rust ${{ matrix.rust-version }}
@@ -54,11 +54,11 @@ jobs:
       run: rustup target add wasm32-unknown-unknown
 
     - name: Run Poll Contract Tests
-      working-directory: contract/poll-contract
+      working-directory: vote_dApp-main/contract/poll-contract
       run: cargo test --verbose
       
     - name: Build Poll Contract WASM
-      working-directory: contract/poll-contract
+      working-directory: vote_dApp-main/contract/poll-contract
       run: cargo build --target wasm32-unknown-unknown --release
 
     # ========== UPLOAD ARTIFACTS ==========
@@ -69,8 +69,8 @@ jobs:
         name: build-artifacts
         retention-days: 30
         path: |
-          frontend/stellar-poll-app/build/
-          contract/poll-contract/target/wasm32-unknown-unknown/release/
+          vote_dApp-main/frontend/stellar-poll-app/build/
+          vote_dApp-main/contract/poll-contract/target/wasm32-unknown-unknown/release/
 
   code-quality:
     name: Code Quality Checks
