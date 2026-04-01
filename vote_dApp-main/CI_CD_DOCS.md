@@ -34,7 +34,7 @@ StellarVote implements a comprehensive GitHub Actions CI/CD pipeline that runs o
 ```
 
 **Artifacts:**
-- `frontend/stellar-poll-app/dist/` - Built React app
+- `frontend/stellar-poll-app/build/` - Built React app (optimized production)
 - Build logs for debugging
 
 #### Smart Contract Build & Test
